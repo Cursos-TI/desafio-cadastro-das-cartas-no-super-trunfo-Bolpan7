@@ -30,12 +30,17 @@ int main() {
 
     printf("Digite a área em km² de sua cidade, só com números: \n");
     scanf("%f", &area1);
+    while ((temp_char = getchar()) != '\n' && temp_char != EOF);
+
 
     printf("Digite o produto interno bruto da cidade: \n");
     scanf("%f", &pib1);
+    while ((temp_char = getchar()) != '\n' && temp_char != EOF);
+
 
     printf("Digite o número de pontos turisticos desta cidade: \n");
     scanf("%d", &pontos_turisticos1);
+    while ((temp_char = getchar()) != '\n' && temp_char != EOF);
     
     printf("Carta 1: \n");
     printf("Estado: %c\n", estado1);
