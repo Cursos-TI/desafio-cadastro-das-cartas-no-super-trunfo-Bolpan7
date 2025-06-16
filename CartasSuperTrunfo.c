@@ -51,34 +51,44 @@ int main() {
     printf("PIB: %.2f\n", pib1);
     printf("Número de Pontos Turísticos: %d\n", pontos_turisticos1);
 
+    
+    // Variáveis para Carta 2
     char estado2;
-    char codigo2[10];
+    char codigo2_numerico2[10];
     char nome_da_cidade2[20];
     int populacao2;
     float area2;
     float pib2;
     int pontos_turisticos2;
     printf("Insira as informações da carta2:\n");
-    printf("Digite a letra inicial do seu Estado: \n");
-    scanf(" %c", &estado2);
+    printf("Digite a letra inicial do seu Estado (A-H): \n");
+    scanf(" %c", &estado2); // Espaço antes de %c
+    while ((temp_char = getchar()) != '\n' && temp_char != EOF);
 
     printf("Digite o nome da cidade: \n");
     scanf("%s", nome_da_cidade2);
+    scanf("%19s", nome_da_cidade2);
+    while ((temp_char = getchar()) != '\n' && temp_char != EOF);
 
-    printf("Digite o dois números, de 01 a 04: \n");
-    scanf("%s", codigo2);
+    printf("Digite a parte numérica do código da carta (ex: 01, 02, 03 ou 04): \n");
+    scanf("%s", codigo_numerico2); // Sem &
+    while ((temp_char = getchar()) != '\n' && temp_char != EOF);
 
     printf("Digite número de habitantes da cidade: \n");
     scanf("%d", &populacao2);
+    while ((temp_char = getchar()) != '\n' && temp_char != EOF);
 
     printf("Digite a área em km² de sua cidade, só com números: \n");
     scanf("%f", &area2);
+    while ((temp_char = getchar()) != '\n' && temp_char != EOF)
 
     printf("Digite o produto interno bruto da cidade: \n");
     scanf("%f", &pib2);
+    while ((temp_char = getchar()) != '\n' && temp_char != EOF)
 
     printf("Digite o número de pontos turisticos desta cidade: \n");
     scanf("%d", &pontos_turisticos2);
+    while ((temp_char = getchar()) != '\n' && temp_char != EOF)
     
     printf("Carta 2: \n");
     printf("Estado: %c\n", estado2);
